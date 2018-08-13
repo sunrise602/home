@@ -1,3 +1,20 @@
 <p>
-  heroes works!
+  heroes works! {{hero.name}} {{hero.id}}
 </p>
+
+<div>
+  <button [disabled]="isSpecial">propery binding button</button>
+</div>
+
+<div>
+  <div [class.special]="isSpecial">class binding button</div>
+</div>
+
+<div>
+  <button [style.color]="isSpecial ? 'red' : 'green'">style binding button</button>
+</div>
+
+<div>
+  <button (click)="onSave($event)">event binding save button</button>
+</div>
+
